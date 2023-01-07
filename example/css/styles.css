@@ -2,20 +2,25 @@
 @import url("https://fonts.googleapis.com/css?family=Ubuntu:400,700|Cabin+Condensed:400,600");
 
 body {
-  background-color: #FFF;
+  background-color: #454545;
   margin: 0px;
-  font-family: Ubuntu, sans-serif;
-  color: #1e1e1e;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: white;
   font-weight: normal;
   padding-top: 0;
+  text-align: center;
 }
 
 h1, h2, h3, h4 {
-  font-family: "Cabin Condensed", sans-serif;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+h1 {
+  font-size: 80px;
+}
+
+
 header {
-  background: #FFC600;
   padding: 1em;
 }
 
@@ -25,19 +30,12 @@ header .headline {
 }
 
 header .headline h1 {
-  color: #FFDD69;
   font-size: 3em;
   margin-bottom: 0;
 }
 
 header .headline h2 {
   margin-top: 0.2em;
-}
-
-footer {
-  background: #0A4DB7;
-  color: #6C9CE8;
-  padding: 1em 2em 2em;
 }
 
 #container {
@@ -95,7 +93,6 @@ footer {
   display: block;
   clear: both;
 }
-
 
 #result_strip {
   margin: 10px 0;
