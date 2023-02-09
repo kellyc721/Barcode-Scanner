@@ -1,11 +1,10 @@
 {
+  "start": "node server.js",
   "name": "quagga",
   "version": "0.12.1",
   "description": "An advanced barcode-scanner written in JavaScript",
-  "main": "lib/quagga.js",
-  "typings": "type-definitions/quagga.d.ts",
+  "main": "dist/quagga.js",
   "browser": "dist/quagga.min.js",
-  "typings": "type-definitions/quagga.d.ts",
   "devDependencies": {
     "async": "^1.4.2",
     "babel-cli": "^6.5.1",
