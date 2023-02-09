@@ -28,34 +28,11 @@
                 <label>
                     <span>Barcode Type</span>
                     <select name="decoder_readers">
-                        <option value="code_128">Code 128</option>
-                        <option value="code_39">Code 39</option>
-                        <option value="code_39_vin">Code 39 VIN</option>
-                        <option value="ean">EAN</option>
-                        <option value="ean_extended">EAN-extended</option>
-                        <option value="ean_8">EAN-8</option>
-                        <option value="upc" selected="selected">UPC</option>
-                        <option value="upc_e">UPC-E</option>
-                        <option value="codabar">Codabar</option>
-                        <option value="i2of5">Interleaved 2 of 5</option>
-                        <option value="2of5">Standard 2 of 5</option>
-                        <option value="code_93">Code 93</option>
-                    </select>
-                </label>
-                <label>
-                    <span>Resolution (width)</span>
-                    <select name="input-stream_constraints">
-                        <option value="320x140">320px</option>
-                        <option selected="selected" value="640x480">640px</option>
                 
+                        <option value="upc" selected="selected">UPC</option>
+                        
                     </select>
-                </label>
-
-
-                    <span>Camera</span>
-                    <select name="input-stream_constraints" id="deviceSelection">
-                    </select>
-                </label>
+              
                 <label style="display: none">
                     <span>Zoom</span>
                     <select name="settings_zoom"></select>
@@ -70,6 +47,53 @@
         <ul class="thumbnails"></ul>
         <ul class="collector"></ul>
       </div>
+
+       <!-- <div id="product-result">
+        <p id="product-result-block">
+            <span>Product: </span>
+            <span id="product"></span>
+        </p>
+      </div> -->
+
+      <script>
+    
+        const options = {
+            method: 'GET',
+            url: 'https://product-lookup-by-upc-or-ean.p.rapidapi.com/code/311917076553',
+            headers: {
+                'X-RapidAPI-Key': 'eab9db30edmsh2a12ba5f4987ed9p19d6fdjsn57622c9a4217',
+                'X-RapidAPI-Host': 'product-lookup-by-upc-or-ean.p.rapidapi.com',
+                'Content-Type' : 'application/json'
+            },
+            formattedData: Qs.stringify(data)
+        };
+        
+        
+        const analyzeBarcode = (number, callback) => {
+           const data = {
+            list: document.getElementById("#result_strip").innerHTML,
+            number: result_strip.getElementsByClassName("thumbnails").innerHTML
+           };
+        }
+        
+        axios.request(options).then(function(response) {
+            console.log(response.data);
+            callback(data)
+        }).catch(function (error) {
+            console.error(error);
+        });
+
+        const displayResult =  product => {
+            const productBlockElement = document.getElementById("product-result-block");
+            const resultElement = document.getElementById(data);
+        }
+
+        const interactive = () => {
+            const numberElement = document.getElementById(data);
+            return analyzeBarcode(numberElement, displayResult);
+        }
+
+      </script>
       
       <div id="interactive" class="viewport"></div>
      
@@ -79,5 +103,13 @@
     <script src="//webrtc.github.io/adapter/adapter-latest.js" type="text/javascript"></script>
     <script src="../dist/quagga.js" type="text/javascript"></script>
     <script src="live_w_locator.js" type="text/javascript"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- Querystring library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.7.0/qs.min.js"></script>
+    <!-- <script>
+    import axios from "axios";
+    const axios = require("axios");
+    </script> -->
+    
   </body>
 </html>

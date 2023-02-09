@@ -1,7 +1,7 @@
 $(function() {
     var resultCollector = Quagga.ResultCollector.create({
         capture: true,
-        capacity: 20,
+        capacity: 1,
         blacklist: [{
             code: "WIWV8ETQZ1", format: "code_93"
         }, {
@@ -129,10 +129,10 @@ $(function() {
                 $ul = $("#result_strip ul.collector");
 
             results.forEach(function(result) {
-                var $li = $('<li><div class="thumbnail"><div class="imgWrapper"><img /></div><div class="caption"><h4 class="code"></h4></div></div></li>');
+                var $li = $('<li><div class="thumbnail"><div class="imgWrapper"><img /></div><div class="caption"><h2 class="code"></h2></div></div></li>');
 
                 $li.find("img").attr("src", result.frame);
-                $li.find("h4.code").html(result.codeResult.code + " (" + result.codeResult.format + ")");
+                $li.find("h2.code").html(result.codeResult.code + " (" + result.codeResult.format + ")");
                 $ul.prepend($li);
             });
         },
@@ -287,9 +287,9 @@ $(function() {
             App.lastResult = code;
             var $node = null, canvas = Quagga.canvas.dom.image;
 
-            $node = $('<li><div class="thumbnail"><div class="imgWrapper"><img /></div><div class="caption"><h4 class="code"></h4></div></div></li>');
+            $node = $('<li><div class="thumbnail"><div class="imgWrapper"><img /></div><div class="caption"><h2 class="code"></h2></div></div></li>');
             $node.find("img").attr("src", canvas.toDataURL());
-            $node.find("h4.code").html(code);
+            $node.find("h2.code").html(code);
             $("#result_strip ul.thumbnails").prepend($node);
         }
     });

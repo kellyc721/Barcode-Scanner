@@ -1,8 +1,7 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css?family=Ubuntu:400,700|Cabin+Condensed:400,600");
 
 body {
-  background-color: #454545;
+  background-color: #242424;
   margin: 0px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   color: white;
@@ -19,9 +18,12 @@ h1 {
   font-size: 80px;
 }
 
+h2 {
+  font-size: 45px;
+}
 
 header {
-  padding: 1em;
+  padding: .5em;
 }
 
 header .headline {
@@ -30,8 +32,8 @@ header .headline {
 }
 
 header .headline h1 {
-  font-size: 3em;
-  margin-bottom: 0;
+  font-size: 3.5em;
+  margin-bottom: -.5em;
 }
 
 header .headline h2 {
@@ -114,28 +116,30 @@ header .headline h2 {
 #result_strip > ul > li {
   display: inline-block;
   vertical-align: middle;
-  width: 160px;
+  width: 350px;
 }
 
 #result_strip > ul > li .thumbnail {
-  padding: 5px;
-  margin: 4px;
+  padding: 6px;
+  margin: 5px;
   border: 1px dashed #CCC;
 }
 
 #result_strip > ul > li .thumbnail img {
-  max-width: 140px;
+  max-width: 275px;
 }
 
 #result_strip > ul > li .thumbnail .caption {
   white-space: normal;
 }
 
-#result_strip > ul > li .thumbnail .caption h4 {
+#result_strip > ul > li .thumbnail .caption h2 {
   text-align: center;
   word-wrap: break-word;
   height: 40px;
   margin: 0px;
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 #result_strip > ul:after {
@@ -166,11 +170,11 @@ header .headline h2 {
   margin-bottom: 14px;
 }
 
-.scanner-overlay > .header h4, .scanner-overlay > .header .close {
+.scanner-overlay > .header h2, .scanner-overlay > .header .close {
   line-height: 16px;
 }
 
-.scanner-overlay > .header h4 {
+.scanner-overlay > .header h2 {
   margin: 0px;
   padding: 0px;
 }
@@ -284,7 +288,7 @@ i.icon-24-scan {
     margin-bottom: 14px;
   }
 
-  .overlay.scanner > .header h4, .overlay.scanner > .header .close {
+  .overlay.scanner > .header h2, .overlay.scanner > .header .close {
     line-height: 16px;
   }
 
