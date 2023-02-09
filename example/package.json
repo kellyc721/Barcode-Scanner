@@ -3,7 +3,9 @@
   "name": "quagga",
   "version": "0.12.1",
   "description": "An advanced barcode-scanner written in JavaScript",
-  "main": "dist/quagga.js",
+  "script": {
+    "start": "node dist/quagga.js"
+  },
   "browser": "dist/quagga.min.js",
   "devDependencies": {
     "async": "^1.4.2",
