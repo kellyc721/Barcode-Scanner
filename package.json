@@ -1,11 +1,9 @@
 {
+  "start": "start http://localhost:1234",
   "name": "quagga",
   "version": "0.12.1",
   "description": "An advanced barcode-scanner written in JavaScript",
-  "main": "lib/quagga.js",
-  "typings": "type-definitions/quagga.d.ts",
   "browser": "dist/quagga.min.js",
-  "typings": "type-definitions/quagga.d.ts",
   "devDependencies": {
     "async": "^1.4.2",
     "babel-cli": "^6.5.1",
@@ -69,6 +67,8 @@
     "doc": "doc"
   },
   "scripts": {
+    "start": "npm run build && npm run dev && npm run open",
+    "open": "start http://localhost:1234/build/live_w_locator.html", 
     "test": "cross-env BABEL_ENV=commonjs grunt test",
     "integrationtest": "grunt integrationtest",
     "build:dev": "cross-env BUILD_ENV=development webpack",
