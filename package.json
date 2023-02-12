@@ -58,7 +58,6 @@
     "karma-webpack": "^1.8.1",
     "lolex": "^1.4.0",
     "mocha": "^2.3.2",
-    "phantomjs": "^1.9.18",
     "sinon": "^1.17.7",
     "sinon-chai": "^2.8.0",
     "webpack": "^2.2.1",
@@ -89,10 +88,6 @@
     "quaggajs",
     "barcode",
     "ean",
-    "code128",
-    "code39",
-    "codabar",
-    "i2of5",
     "upc",
     "getusermedia",
     "imageprocessing"
