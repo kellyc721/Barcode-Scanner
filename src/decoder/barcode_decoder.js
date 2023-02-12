@@ -1,33 +1,13 @@
 import Bresenham from './bresenham';
 import ImageDebug from '../common/image_debug';
-import Code128Reader from '../reader/code_128_reader';
+
 import EANReader from '../reader/ean_reader';
-import Code39Reader from '../reader/code_39_reader';
-import Code39VINReader from '../reader/code_39_vin_reader';
-import CodabarReader from '../reader/codabar_reader';
+
 import UPCReader from '../reader/upc_reader';
-import EAN8Reader from '../reader/ean_8_reader';
-import EAN2Reader from '../reader/ean_2_reader';
-import EAN5Reader from '../reader/ean_5_reader';
-import UPCEReader from '../reader/upc_e_reader';
-import I2of5Reader from '../reader/i2of5_reader';
-import TwoOfFiveReader from '../reader/2of5_reader';
-import Code93Reader from '../reader/code_93_reader';
 
 const READERS = {
-    code_128_reader: Code128Reader,
     ean_reader: EANReader,
-    ean_5_reader: EAN5Reader,
-    ean_2_reader: EAN2Reader,
-    ean_8_reader: EAN8Reader,
-    code_39_reader: Code39Reader,
-    code_39_vin_reader: Code39VINReader,
-    codabar_reader: CodabarReader,
     upc_reader: UPCReader,
-    upc_e_reader: UPCEReader,
-    i2of5_reader: I2of5Reader,
-    '2of5_reader': TwoOfFiveReader,
-    code_93_reader: Code93Reader
 };
 export default {
     create: function(config, inputImageWrapper) {
