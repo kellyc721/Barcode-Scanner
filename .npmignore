@@ -10,4 +10,5 @@ _includes/
 .idea/
 doc/
 .gitignore
+phantomjs/
  
